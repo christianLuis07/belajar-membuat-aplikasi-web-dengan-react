@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AltformTRIAL-Regular";
+  src: url("./Altform-TRIAL/AltformTRIAL-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "AltformTRIAL-Regular", sans-serif;
+  background-color: #f5f4eb;
+}
+
+/* Style untuk Navbar */
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* biar bisa turun ke bawah saat layar kecil */
+  gap: 10px;
+  border-bottom: 3px dashed gray;
+}
+
+nav h1 {
+  color: #005d3b;
+  font-size: 1.5rem;
+}
+
+nav h1 span {
+  color: #222222;
+}
+
+nav input[type="text"] {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  background: transparent;
+  font-size: 1rem;
+  flex: 1; /* biar input bisa fleksibel melebar */
+  max-width: 250px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; /* susun vertikal */
+    align-items: flex-start;
+  }
+
+  nav h1 {
+    font-size: 1.25rem;
+  }
+
+  nav input[type="text"] {
+    width: 100%; /* input full di mobile */
+    max-width: none;
+  }
+}
